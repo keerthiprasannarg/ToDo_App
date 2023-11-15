@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="./login.js"></script>
     <title>Login Page</title>
 </head>
 <body class="loginAlign">
@@ -15,16 +16,16 @@
             <a href="totolist.html">Todo list</a>&nbsp;
         </nav>
         <br>
-        <form class="loginBox"  >
+        <form class="loginBox" id="loginBoxid" >
             <label>Username</label>
-            <input type="text">
+            <input type="text" id="loginBoxUsername">
             <br>
             <br>
             <label>Password</label>
-            <input type="text">
+            <input type="text" id="loginBoxPassword">
             <br>
             <br>
-            <button type="submit">Login</button>
+            <button type="submit" id="loginsubmit">Login</button>
         </form>
     </div>
 </body>

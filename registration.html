@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
     <title>Registeration Page</title>
+    <script src="./registration.js"></script>
 </head>
 <body>
     <div class="background_wrapper">
@@ -20,27 +21,27 @@
         <div class="registrationAlign">
             
             <div>
-                <form class="registrationBox">
+                <form class="registrationBox" id="registrationBoxid">
         
                     <label>First Name</label>
-                    <input type="text">
+                    <input type="text" id="registrationBoxFirstname">
                     <br>
                     <br>
                     <label>Last Name</label>
-                    <input type="text">
+                    <input type="text" id="registrationBoxLastname">
                     <br>
                     <br>
                     <label>Username</label>
-                    <input type="text">
+                    <input type="text" id="registrationBoxUsername">
                     <br>
                     <br>
                     <label>Password</label>
-                    <input type="password">
+                    <input type="password" id="registrationBoxPassword">
                     <br>
                     <br>
                     <div class="btn_container">
         
-                        <button type="submit" class="signup_btn">Sign Up</button>
+                        <button type="submit" class="signup_btn" id="registrationBoxsubmit">Sign Up</button>
                     </div>
                 </form>
             </div>
