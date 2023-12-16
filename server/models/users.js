@@ -54,22 +54,23 @@ async function login(user) {
 
 // Register (Create) New User
 async function register(user) {
-  let userResult = await getUser(user.username)
+  let userResult = await getUser(user.UserName)
   if(userResult.length > 0) throw Error("Username already in use!!")
 
   let sql = `
     INSERT INTO users(UserName, Password, Email)
-    VALUES("${user.username}", "${user.password}", "${user.email}")
+    VALUES("${user.UserName}", "${user.Password}", "${user.Email}")
   `
 
   await con.query(sql)
-  const newUser = await getUser(user.username)
+  const newUser = await getUser(user.UserName)
+  console.log('newUser[0]: ', newUser);
   return newUser[0]
 }
 
 // Update - CRUD
 async function editUser(user) {
-  let updatedUser = await getUser(user.username)
+  let updatedUser = await getUser(user.UserName)
   if(updatedUser.length > 0) throw Error("Username not available!")
 
   let sql = `UPDATE users
@@ -77,7 +78,7 @@ async function editUser(user) {
     WHERE UserId = ${user.UserId}
   `
   await con.query(sql)
-  updatedUser = await getUser(user.username)
+  updatedUser = await getUser(user.UserName)
   return updatedUser[0]
 }
 
