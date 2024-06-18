@@ -70,7 +70,7 @@ async function editTodo(newTodo) {
   `;
   await con.query(sql);
   updatedTodo = await getTodoById(newTodo.TodoId);
-  return updatedTodo[0];
+  // return updatedTodo[0];
 }
 module.exports = {
   getAllTodos,
